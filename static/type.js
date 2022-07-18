@@ -10,7 +10,7 @@ async function type2(target, text1, text2){
 
 async function clear(target, text_raw){
 	clearflag = true;
-	text = text_raw + "clear"
+	text = text_raw + " clear"
 	for (let i = text_raw.length; i < text.length+1; i++){
 		text_mod = '';
 		arrows = 0;
