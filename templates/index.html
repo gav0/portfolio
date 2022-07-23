@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
 
   <title>Jason Gavriel</title>
+
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 
@@ -12,8 +15,8 @@
 
   <header>
     <div style="padding-left:40px">
-      <h1> Jason Gavriel </h1>
-      <p style="font-weight:300;color:#CCC">Quantum Computing | Software Engineering</p>
+      <h1 style="margin-bottom:0;"> Jason Gavriel </h1>
+      <p style="font-weight:300;color:#CCC">Quantum Computing <span class="desktop">|</span><span class="mobile"><br></span> Software Engineering</p>
     </div>
 
     <div>
@@ -48,46 +51,31 @@
       }
     }
     txt_intro = "> ./start.sh > > Hello world > Welcome to gavriel.au> ";
-    txt_about = "> sysinfo() > > A professional Software Engineer & student undergoing a > PhD in Quantum Computing>$$  > Other interests include: >   Physics >   Cryptography >   Politics >   Chess >   D&D >   Virtual Reality >   Classical Hardware >   Transhumanism > ";
+    txt_about = "> sysinfo() > > A professional Software Engineer & > PhD student in Quantum Computing>$$  > Other interests include: >   Physics >   Cryptography >   Politics >   Chess >   D&D >   Virtual Reality >   Classical Hardware >   Transhumanism > ";
     txt_code = "> git status > > Public Repositories: >   Transveral Injection - Encoding Non-Clifford States Using The Surface Code >   <a href='https://github.com/gav0/Trace2Cirq'>TracerToCirq - Real-Time Transpilation from Q# to Cirq</a> >   <a href='https://github.com/gav0/portfolio'>This Website</a> > ";
     txt_papers = "> vi papers.tex > > Watch this space :) > ";
     txt_contact = "> cat socials.txt > ><a href='https://twitter.com/J_Gavriel'> Twitter</a> ><a href='https://github.com/gav0'> Github</a> ><a href='https://scholar.google.com.au/citations?hl=en&user=nA3i2VUAAAAJ'> Scholar</a> > <a href='mailto:j@gavriel.au'>Email</a>$> "
     
 
     clearflag = false;
-    last_text = "";
-    disable();
     type2("content", txt_intro, txt_about);
-    last_text = txt_about;
 
 
     async function about(){
-      disable();
-      await clear("content", last_text);
+      await clear("content");
       await type("content", txt_about, 5000);
-      last_text = txt_about;
-      enable();
     }
     async function code(){
-      disable();
-      await clear("content", last_text);
+      await clear("content");
       await type("content", txt_code, 5000);
-      last_text = txt_code;
-      enable();
     }
     async function papers(){
-      disable();
-      await clear("content", last_text);
+      await clear("content");
       await type("content", txt_papers, 5000);
-      last_text = txt_papers;
-      enable();
     }
     async function contact(){
-      disable();
-      await clear("content", last_text);
+      await clear("content");
       await type("content", txt_contact, 5000);
-      last_text = txt_contact;
-      enable();
     }
     
   </script>

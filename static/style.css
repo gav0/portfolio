@@ -1,23 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:900|Roboto+Mono:300,400,700);
 
+@media screen and (min-width: 840px) {
+	h1 {
+	    font-weight:500;
+	}
+	.mobile {
+		display: none;
+	}
+	body {
+	    color: #fff;
+	    background-color: #000;
+	    font-family: Roboto Mono, Helvetica, Arial, sans-serif;
+	}
 
-h1 {
-    font-weight:500;
+	ul, li {
+		display:inline
+	}
+
+	a {
+		color: #fff;
+		text-decoration-line: none;
+	}
 }
 
-body {
-    color: #fff;
-    background-color: #000;
-    font-family: Roboto Mono, Helvetica, Arial, sans-serif;
+@media screen and (max-width: 839px) {
+	h1 {
+	    font-weight:500;
+
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	body {
+	    color: #fff;
+	    background-color: #000;
+	    font-family: Roboto Mono, Helvetica, Arial, sans-serif;
+	}
+
+	ul, li {
+		display:inline;
+		height:20px!important;
+	}
+
+	a {
+		font-size:16px;
+		color: #fff;
+		text-decoration-line: none;
+	}
 }
-
-ul, li {
-	display:inline
-}
-
-a {
-	color: #fff;
-	text-decoration-line: none;
-}
-
-
