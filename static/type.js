@@ -94,11 +94,11 @@ async function type(target, text, loop){
 			}
 			if (arrowmem<=0){
 				if (text[i-1] == "."){
-					st = 300;
+					st = 10;
 				} else if (text[i-1] == "$"){
 					st = 500;
 				} else if (text[i-1] == ","){
-					st = 200;
+					st = 100;
 				} else {
 					st = 10+Math.floor(Math.random()*15);
 				}
