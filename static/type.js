@@ -36,11 +36,11 @@ async function clear(target){
 		document.getElementById(target).innerHTML = text_mod_clear+"_";			
 		
 	}
-	await sleep(200);
+	await sleep(150);
 	document.getElementById(target).innerHTML = text_mod_clear + " ";
-	await sleep(500);
+	await sleep(300);
 	document.getElementById(target).innerHTML = text_mod_clear + "_";	
-	await sleep(500);
+	await sleep(300);
 	document.getElementById(target).innerHTML = "";
 
 	clearflag = false;
@@ -96,11 +96,11 @@ async function type(target, text, loop){
 				if (text[i-1] == "."){
 					st = 10;
 				} else if (text[i-1] == "$"){
-					st = 500;
+					st = 300;
 				} else if (text[i-1] == ","){
-					st = 100;
+					st = 50;
 				} else {
-					st = 10+Math.floor(Math.random()*15);
+					st = 5+Math.floor(Math.random()*10);
 				}
 
 				document.getElementById(target).innerHTML = text_mod;
